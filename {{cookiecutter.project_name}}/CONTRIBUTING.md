@@ -66,7 +66,7 @@ $ poetry run {{cookiecutter.project_name}}
 Run the full test suite:
 
 ```console
-$ nox
+$ poetry run nox
 ```
 
 List the available Nox sessions:
