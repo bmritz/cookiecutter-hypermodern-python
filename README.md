@@ -49,6 +49,10 @@
 
 ```console
 cookiecutter gh:cjolowicz/cookiecutter-hypermodern-python --checkout=2022.6.3
+cd <created directory>
+git init
+git branch -M main
+make install
 ```
 
 ## Features

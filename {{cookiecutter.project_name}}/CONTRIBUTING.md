@@ -53,8 +53,8 @@ You can now run an interactive Python session,
 or the command-line interface:
 
 ```console
-$ poetry run python
-$ poetry run {{cookiecutter.project_name}}
+$ .poetry/bin/poetry run python
+$ .poetry/bin/poetry run {{cookiecutter.project_name}}
 ```
 
 [poetry]: https://python-poetry.org/
@@ -66,20 +66,20 @@ $ poetry run {{cookiecutter.project_name}}
 Run the full test suite:
 
 ```console
-$ poetry run nox
+$ make run-nox-all
 ```
 
-List the available Nox sessions:
+List nox sesssions:
 
 ```console
-$ nox --list-sessions
+$ .poetry/bin/poetry run nox --list
 ```
 
 You can also run a specific Nox session.
 For example, invoke the unit test suite like this:
 
 ```console
-$ nox --session=tests
+$ NOXSESSION=<session-name> make run-nox-session
 ```
 
 Unit tests are located in the _tests_ directory,
