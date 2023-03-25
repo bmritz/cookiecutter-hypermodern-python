@@ -102,7 +102,7 @@ Feel free to submit early, though—we can always iterate on this.
 To run linting and code formatting checks before committing your change, you can install pre-commit as a Git hook by running the following command:
 
 ```console
-$ nox --session=pre-commit -- install
+$ NOXSESSION='pre-commit -- install' make run-nox-session
 ```
 
 It is recommended to open an issue before starting work on anything.
@@ -113,3 +113,11 @@ This will allow a chance to talk it over with the owners and validate your appro
 <!-- github-only -->
 
 [code of conduct]: CODE_OF_CONDUCT.md
+
+
+## To release a new version
+git checkout main
+git pull
+make new-version-<patch|minor|major|prepatch|preminor|premajor|prerelease>
+git add pyproject.toml
+git push

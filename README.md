@@ -55,6 +55,15 @@ git branch -M main
 make install
 ```
 
+### Development troubleshooting
+If you see:
+```
+urllib.error.URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:997)>
+```
+Go to /Applications/Python3.x and run 'Install Certificates.command'
+
+
+
 ### Setup Github Actions
 
 - Set the appropriate Github Actions Secrets in Github.
