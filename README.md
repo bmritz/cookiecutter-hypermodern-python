@@ -55,6 +55,13 @@ git branch -M main
 make install
 ```
 
+### Setup Github Actions
+
+- Set the appropriate Github Actions Secrets in Github.
+  - Check the [Release Workflow](./.github/workflows/release.yml) to see what secrets need to be set for successful release. Secrets will look something like `${{ secrets.<> }}` in that file.
+  - Note: `${{ secrets.GITHUB_TOKEN }}` is set up automatically by Github Actions on each run in a typical set up.
+
+
 ## Features
 
 <!-- features-begin -->

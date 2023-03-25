@@ -5,6 +5,7 @@ on:
       - main
 jobs:
   draft_release:
+    permissions: write-all
     runs-on: ubuntu-latest
     steps:
       - uses: release-drafter/release-drafter@v5.23.0

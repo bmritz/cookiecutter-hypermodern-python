@@ -49,6 +49,7 @@ xdoctest = {extras = ["colors"], version = ">=0.15.10"}
 myst-parser = {version = ">=1.0.0"}
 nox = ">=2022.11.21"
 nox-poetry = "^1.0.2"
+ipython = "^8.11.0"
 
 [tool.coverage.paths]
 source = ["src", "*/site-packages"]
