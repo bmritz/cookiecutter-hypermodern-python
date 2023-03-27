@@ -16,6 +16,7 @@ install: .poetry/bin/poetry		## install all dependencies for development
 
 .poetry/bin/poetry:						## install poetry
 	@curl -sSL https://install.python-poetry.org | POETRY_HOME=$(REPOSITORY_ROOT)/$(shell basename $(dir $(abspath $(dir $(@))))) python3 - --version=1.4.0
+	$(MAKE) install
 
 run-nox-all: .poetry/bin/poetry			## Run all nox sessions
 	PATH=$$PATH:$(dir $<) $< run nox
