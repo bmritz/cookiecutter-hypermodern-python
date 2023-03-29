@@ -52,6 +52,7 @@ cookiecutter gh:bmritz/cookiecutter-hypermodern-python
 cd <created directory>
 git init
 git branch -M main
+# Open `noxfile.py` and change `python_version_default` to a version of python installed on your machine.
 make install
 ```
 

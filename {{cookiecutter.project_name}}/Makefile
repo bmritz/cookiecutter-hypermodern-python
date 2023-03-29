@@ -8,15 +8,17 @@ help:           			## Show this help.
 	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//'
 
 
-.PHONY : install run-nox-all run-nox-session format run-quick-test ipython-shell
+.PHONY : install install-poetry run-nox-all run-nox-session format run-quick-test ipython-shell
 
-install: .poetry/bin/poetry		## install all dependencies for development
+install-poetry: .poetry/bin/poetry
 	$< install
+
+install: install-poetry		## install all dependencies for development
 	NOXSESSION='pre-commit -- install' make run-nox-session
 
 .poetry/bin/poetry:						## install poetry
 	@curl -sSL https://install.python-poetry.org | POETRY_HOME=$(REPOSITORY_ROOT)/$(shell basename $(dir $(abspath $(dir $(@))))) python3 - --version=1.4.0
-	$(MAKE) install
+	$(MAKE) install-poetry
 
 run-nox-all: .poetry/bin/poetry			## Run all nox sessions
 	PATH=$$PATH:$(dir $<) $< run nox
