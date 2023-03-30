@@ -24,7 +24,7 @@ except ImportError:
     raise SystemExit(dedent(message)) from None
 
 
-package = "blackbox_llm"
+package = "{{cookiecutter.package_name}}"
 python_version_default = "3.11"
 python_versions = [
     "3.11",
