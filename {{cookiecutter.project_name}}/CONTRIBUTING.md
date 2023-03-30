@@ -39,9 +39,9 @@ Request features on the [Issue Tracker].
 
 You need Python 3.7+ and the following tools:
 
-- [Poetry]
-- [Nox]
-- [nox-poetry]
+- [poetry](https://python-poetry.org/)
+- [nox](https://nox.thea.codes/)
+- [nox-poetry](https://nox-poetry.readthedocs.io/)
 
 Install the package with development requirements:
 
@@ -56,10 +56,6 @@ or the command-line interface:
 $ .poetry/bin/poetry run python
 $ .poetry/bin/poetry run {{cookiecutter.project_name}}
 ```
-
-[poetry]: https://python-poetry.org/
-[nox]: https://nox.thea.codes/
-[nox-poetry]: https://nox-poetry.readthedocs.io/
 
 ## How to test the project
 
