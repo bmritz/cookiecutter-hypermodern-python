@@ -47,6 +47,7 @@
 
 ## Usage
 
+### Create the repository
 ```console
 cookiecutter gh:bmritz/cookiecutter-hypermodern-python
 cd <created directory>
@@ -71,6 +72,9 @@ Go to /Applications/Python3.x and run 'Install Certificates.command'
   - Check the [Release Workflow](./{{cookiecutter.project_name}}/.github/workflows/release.yml) to see what secrets need to be set for successful release. Secrets will look something like `${{ secrets.<> }}` in that file.
   - Note: `${{ secrets.GITHUB_TOKEN }}` is set up automatically by Github Actions on each run in a typical set up.
 
+### Setup The Documentation
+- Log into readthedocs.io (log in with github username, and authorize readthedocs to read the repository)
+- Select your newly created repository to track for builds
 
 ## Features
 
