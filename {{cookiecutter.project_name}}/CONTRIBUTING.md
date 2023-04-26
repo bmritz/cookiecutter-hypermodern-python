@@ -110,8 +110,8 @@ This will allow a chance to talk it over with the owners and validate your appro
 
 [code of conduct]: CODE_OF_CONDUCT.md
 
-
 ## To release a new version
+
 git checkout main
 git pull
 make new-version-<patch|minor|major|prepatch|preminor|premajor|prerelease>
