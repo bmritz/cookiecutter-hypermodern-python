@@ -48,6 +48,7 @@
 ## Usage
 
 ### Create the repository
+
 ```console
 cookiecutter gh:bmritz/cookiecutter-hypermodern-python
 cd <created directory>
@@ -58,13 +59,14 @@ make install
 ```
 
 ### Development troubleshooting
+
 If you see:
+
 ```
 urllib.error.URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:997)>
 ```
+
 Go to /Applications/Python3.x and run 'Install Certificates.command'
-
-
 
 ### Setup Github Actions
 
@@ -73,6 +75,7 @@ Go to /Applications/Python3.x and run 'Install Certificates.command'
   - Note: `${{ secrets.GITHUB_TOKEN }}` is set up automatically by Github Actions on each run in a typical set up.
 
 ### Setup The Documentation
+
 - Log into readthedocs.io (log in with github username, and authorize readthedocs to read the repository)
 - Select your newly created repository to track for builds
 
