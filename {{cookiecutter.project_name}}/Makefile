@@ -1,4 +1,4 @@
-REQUIRED := python3
+REQUIRED := python3 git
 $(foreach bin,$(REQUIRED),\
     $(if $(shell command -v $(bin) 2> /dev/null),,$(error Please install `$(bin)`)))
 
@@ -9,12 +9,15 @@ help:	## Show this help. (Default target)
 
 .DEFAULT_GOAL := help
 
-.PHONY : install install-poetry run-nox-all run-nox-session format run-quick-test ipython-shell new-version
+.PHONY : install install-poetry run-nox-all run-nox-session format run-quick-test ipython-shell new-version ensure-git-repo
+
+ensure-git-repo:
+	git init
 
 install-poetry: .poetry/bin/poetry	## Install poetry in the project.
 	$< install
 
-install: install-poetry		## install all dependencies for development
+install: ensure-git-repo install-poetry		## install all dependencies for development
 	NOXSESSION='pre-commit -- install' make run-nox-session
 
 .poetry/bin/poetry:						## install poetry
